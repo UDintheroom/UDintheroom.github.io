@@ -1,0 +1,342 @@
+@import 'variables','mixin','fonts','reset';
+
+//layout
+// .wrap{
+//   background-image: url(../../images/mobile-main.png);
+//   width: 420px;
+//   background-repeat: no-repeat;
+// }
+.wrap{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  // max-width: 430px;
+  margin: 0 auto;
+  padding: 0 20px;
+  word-break: keep-all;
+}
+@media screen and (min-width: 1280px) {
+  // .wrap{
+  //   max-width: 1280px;
+  //   margin: 0 auto;
+  //   padding: 0 80px;
+  // }
+  
+}
+.inner{
+  position: fixed;
+  right: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+#header{
+  height: $hdH;
+}
+#main{
+  flex-grow: 1;
+}
+// #footer{
+//   height: $ftH;
+// }
+.title{
+  margin: 35vw 0 6vw 0;
+  font-size: 13vw;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -3px;
+  line-height: normal;
+  color: $primary;
+  @media screen and (min-width: $breakpoint-xl) {
+    font-size: 6.9vw;
+    margin: 12vw 0 5.1vw 0;
+  }
+  &.upcoming{
+    margin-top: 15vw;
+    @media screen and (min-width: $breakpoint-xl) {
+      margin: 14.7vw 0 0.1vw 0;
+      br{
+        display: none;
+      }
+    }
+  }
+  &.news{
+    @media screen and (min-width: $breakpoint-xl) {
+      margin: 14.7vw 0 0.1vw 0;
+    }
+  }
+  &.who{
+    margin-top: 8vw;
+  }
+  &.files{
+    margin-bottom: 6.6vw;
+  }
+}
+
+
+//header
+#logo{
+  width: 75px;
+  height: 47px;
+  position: relative;
+  z-index: 1100;
+  a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../images/logo.png);
+    background-size: cover;
+    text-indent: -9999px;
+  }
+}
+#header{
+  // 스크롤 내렸을 때 header 색상 변경
+  // width: 100%;
+  // &.active{
+  //   margin: 0 -20px;
+  //   background: $primary;
+  // }
+  .inner{
+    @include flex($justify: space-between);
+    // &.active{
+    //   margin: 0 -20px;
+    //   background: $primary;
+    // }
+  }
+  #gnb{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 100px;
+    background: $primary;
+    transition: left 0.2s;
+    .depth1{
+      margin: 0 20px;
+      a{
+        color: $w;
+        font-size: 30px;
+        font-weight: 900;
+        font-style: italic;
+      }
+      .depth2{
+        a{
+          // color: $primary;
+          font-size: 24px;
+          font-weight: 700;
+        }
+        .depth3{
+          a{
+            font-size: 18px;
+            font-weight: 400;
+            font-style: normal;
+          }
+        }
+      }
+    }
+    .language{
+      margin: 0 20px;
+      a{
+        color: $w;
+        font-size: 30px;
+        font-weight: 900;
+        font-style: italic;
+      }
+    }
+  }
+  .gnb-wrap{
+    .inp-burger{
+      // 체크박스 없애기
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: none;
+      opacity: 0;
+      visibility: hidden;
+      // input(체크박스) 체크 됐을 때
+      &:checked{
+        &+ .label-burger{
+          .bar{
+            &:nth-child(1){
+              transform: translateY(3.5px) rotate(45deg);
+            }
+            &:nth-child(2){
+              display: none;
+            }
+            &:nth-child(3){
+              transform: translateY(-3.5px) rotate(-45deg);
+            }
+          }
+        }
+        // gnb가 체크 됐을 때
+        & ~ #gnb{
+          display: flex;
+          left: 0;
+        }
+      }
+    }
+    // 선택 안 됐을 때 디자인
+    .label-burger{
+      position: relative;
+      z-index: 1100;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      width: 30px;
+      height: 75px;
+      cursor: pointer;
+      .bar{
+        display: block;
+        width: 20px;
+        height: 3px;
+        background: $w;
+        border-radius: 3px;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+
+// card style
+
+// btn style
+.btn-more-wrap{
+  .btn-more{
+    overflow: hidden;
+    display: inline-block;
+    background: $b;
+    color: $w;
+    font-size: 3.6vw;
+    font-weight: 800;
+    padding: 3vw 6vw;
+    border-radius: 10vw;
+    margin-top: 4vw;
+    transition: all 0.2s;
+    .la-angle-right{
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover{
+      background: $primary;
+      .la-angle-right{
+        animation: move-arrow 1s infinite;
+      }
+    }
+    @keyframes move-arrow {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        top: 50%;
+        transform: translateX(50%);
+      }
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+      font-size: 1.2vw;
+      padding: 1.1vw 1.8vw;
+    }
+  }
+}
+
+// list style
+
+// layout
+
+// header
+
+// footer
+#footer{
+  display: flex;
+  flex-direction: column;
+  margin: 0 -20px;
+  background: $primary;
+  .ft-wrap{
+    margin: 50px 20px;
+    .ft-logo{
+      display: flex;
+      width: 168px;
+      height: 107px;
+      background-image: url(../../images/logo.png);
+      background-size: cover;
+      text-indent: -9999px;
+    }
+    .ft-txt-inner{
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    .info-wrap, .copyright{
+      color: $w;
+      font-size: 3vw;
+      line-height: normal;
+      @media screen and (min-width: $breakpoint-xl) {
+        font-size: 1.1vw;
+        .eng-enter{
+          display: none;
+        }
+      }
+    }
+    .adress-wrap{
+      .address-icon{
+        width: 10px;
+        height: 10px;
+        background-image: url(../../images/icon_address.svg);
+      }
+      .address{
+        margin: 40px 0 22px 0;
+      }
+    }
+  }
+    .sns-wrap{
+      .list-sns{
+        display: grid;
+        grid-template-columns: repeat(5, 13vw);
+        margin-top: 20px;
+        @media screen and (min-width: $breakpoint-xl) {
+          grid-template-columns: repeat(5, 64px);
+        }
+        li{
+          width: 10vw;
+          height: 10vw;
+          overflow: hidden;
+          @media screen and (min-width: $breakpoint-xl) {
+            width: 43px;
+            height: 43px;
+          }
+          a{
+            display: block;
+            text-indent: -9999px;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+          }
+          .facebook{
+            background-image: url(../../images/icon_facebook.png);
+          }
+          .insta{
+            background-image: url(../../images/icon_instagram.png);
+          }
+          .kakao{
+            background-image: url(../../images/icon_kakaotalk.png);
+          }
+          .blog{
+            background-image: url(../../images/icon_blog.png);
+          }
+          .shop{
+            background-image: url(../../images/icon_shop.png);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@import 'main','about';

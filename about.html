@@ -1,0 +1,532 @@
+<!-- 가로 사이즈는 % / 작은 박스,버튼 등은 px 가능
+모든 사이즈에 대응 가능하게끔 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmodee Korea</title>
+  
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="페이지 제목" />
+  <meta property="og:description" content="페이지 설명" />
+  <meta
+    property="og:image"
+    content="http://www.mysite.com/article/article1_featured_image.jpg"/>
+  <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twditter:title" content="페이지 제목" />
+  <meta name="twitter:description" content="페이지 설명" />
+  <meta
+    name="twitter:image"
+    content="http://www.mysite.com/article/article1.html"
+  />
+  <meta name="twitter:domain" content="사이트 명" />
+  <link rel="icon" href="./favicon.png" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+  />
+  <!-- pretendard fonts -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dhurjati&family=Noto+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
+  <!-- google icons -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+    rel="stylesheet"/>
+  <!-- google symbols -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"/>
+  <!-- font awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- swiper -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <link rel="stylesheet" href="./assets/css/comm.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script defer src="./assets/js/comm.js"></script>
+  </head>
+
+<body>
+  <div id="u-skip">
+    <a href="#gnb"><span>주메뉴 바로가기</span></a>
+    <a href="#main"><span>컨텐츠 바로가기</span></a>
+  </div>
+
+  <div class="wrap">
+    <header id="header">
+      <div class="inner">
+          <!-- 로고 -->
+        <h1 id="logo" class="logo">
+          <a href="#">아스모디</a>
+        </h1>
+        <!-- 내비게이션(메뉴) -->
+        <div class="gnb-wrap">
+          <input type="checkbox" name="gnbNav" id="gnbNav" class="inp-burger">
+          <label for="gnbNav" class="label-burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <div class="blind">전체 메뉴 보기</div>
+          </label>
+          <nav id="gnb">
+            <ul class="depth1">
+              <li>
+                <a href="/about.php">회사소개</a>
+              </li>
+              <li>
+                <a href="#">제품소개</a>
+              <li>
+                <a href="#">보드게임</a>
+                <ul class="depth2">
+                  <li><a href="#">가족 / 캐주얼 게임</a></li>
+                  <li><a href="#">파티 게임</a></li>
+                  <li><a href="#">전략 / 게이머스 게임</a></li>
+                  <li><a href="#">매직 &#58; 더 게더링 카드 게임</a></li>
+                  <li><a href="#">직소퍼즐</a></li>
+                  <li><a href="#">서적</a></li>
+                </ul>
+              </li>
+              <li><a href="#">아스모디 에듀</a></li>
+              <li><a href="#">자료실</a>
+                <ul class="depth2">
+                  <li><a href="#">규칙서</a></li>
+                  <li><a href="#">구성물 파일</a></li>
+                  <li><a href="#">기타</a></li>
+                </ul>
+              </li>
+              <li><a href="#">문의하기</a></li>
+          </ul>
+            <div class="language">
+              <a href="#">KO</a>
+              <a href="#">EN</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+
+    <main id="main">
+<!-- main banner -->
+      <div class="main-banner-wrap">
+        <div class="main-banner-img"></div>
+        <div class="main-txt-wrap">
+          <div class="main-txt first-txt">Hello, WE ARE</div>
+          <div class="main-txt second-txt">ASMODEE KOREA</div>
+        </div>
+      </div>
+
+      <!-- who we are -->
+      <section class="sec-g who">
+        <h2 class="title" data-aos="fade-up" data-aos-once="true">
+          WHO WE ARE
+        </h2>
+        <p class="who-txt who-first" data-aos="fade-up" data-aos-once="true">
+          아스모디 그룹은 프랑스에 본사를 두고 있는 세계적인 보드게임 출판 및 유통 회사로, 유럽, 북미, 아시아 지역을 중심으로 세계 각지에 보드게임 개발 스튜디오 및 유통채널을 소유하고 있습니다.
+          <br>
+          300개 이상의 자체 게임 IP를 바탕으로 전세계 50개국 이상의 소비자들에게 놀라운 경험을 선사하는 콘텐츠들을 만들어 가고 있으며, 기존의 테이블탑 보드게임에서 나아가 디지털 게임과 미디어, 서적 등의 출판물 등의 영역으로 사업 분야를 확대해 나가고 있습니다.
+        </p>
+          <p class="who-txt who-second" data-aos="fade-up" data-aos-once="true">
+            아스모디 코리아는 아스모디 그룹의 한국 지사로, 2021년 1월 설립되었습니다.
+            <br>
+            도블, 티켓 투 라이드, 스플렌더, 팬데믹, 딕싯, 아컴호러 시리즈 등 아스모디 그룹의 대표적인 게임들은 물론, 해외 유명 스튜디오들의게임을 한국 시장에 유통하고 있습니다. 또한, 세계적인 트레이딩 카드 게임(TCG) '매직: 더 개더링'의 한국 공식 유통사입니다.
+          </p>
+          <ul class="who-icons">
+            <li class="workers" data-aos="fade-up" data-aos-once="true">
+              <div class="num-wrap">
+                <strong class="num">2300</strong>
+                <strong class="plus">&#43;</strong>
+              </div>
+              <p class="sub-txt">본사 구성원</p>
+            </li>
+            <li class="platforms" data-aos="fade-up" data-aos-once="true">
+              <strong class="num">3</strong>
+              <p class="sub-txt">글로벌 플랫폼</p>
+            </li>
+            <li class="studios" data-aos="fade-up" data-aos-once="true">
+              <strong class="num">18</strong>
+              <p class="sub-txt">스튜디오</p> 
+            </li>
+            <li class="ips" data-aos="fade-up" data-aos-once="true">
+              <div class="num-wrap">
+                <strong class="num">300</strong>
+                <strong class="plus">&#43;</strong>
+              </div>
+              <p class="sub-txt">자체 게임 IP</p>
+            </li>
+            <li class="circulation" data-aos="fade-up" data-aos-once="true">
+              <div class="num-wrap">
+                <strong class="num">50</strong>
+                <strong class="plus">&#43;</strong>
+              </div>
+              <p class="sub-txt">유통 국가</p>
+            </li>
+            <li class="expansion" data-aos="fade-up" data-aos-once="true">
+              <strong class="num">21</strong>
+              <p class="sub-txt">직접 진출 국가</p>
+            </li>
+          </ul>
+      </section>
+
+      <!-- between slide fisrt -->
+      <div class="bt-slide bt1">
+        <div class="rolling-list">
+          <ul>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- we are around the world -->
+      <section class="sec-g world">
+        <h2 class="title" data-aos="fade-up" data-aos-once="true">
+          WE ARE <br class="world-enter">AROUND <br>THE WORLD
+        </h2>
+        <p class="world-txt" data-aos="fade-up" data-aos-once="true">
+          아스모디 그룹은 프랑스에 본사를 두고 있으며, 세계 각지에 지사를 두고 있는 세계적인 보드게임 전문 기업입니다.
+          <br>
+          독일, 영국, 노르딕, 중국, 대만, 북미 등 21개 국가에 보드게임 유통지사와 보드게임 개발 스튜디오를 두고 있습니다.
+          <br>
+          파트너를 통해 진출한 국가까지 포함하면 전세계 50여 개국에서 아스모디의 보드게임을 만나보실 수 있습니다.
+        </p>
+        <div class="worldmap-wrap">
+          <div class="worldmap-img"></div>
+          <div class="worldmap-info-wrap">
+            <p class="worldmap-info direct">아스모디 유통지사가 설립된 국가</p>
+            <p class="worldmap-info partner">파트너를 통해 간접 진출한 국가</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- between slide second -->
+      <div class="bt-slide bt2">
+        <div class="rolling-list">
+          <ul>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+            <li>
+              <div class="rolling-img"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- platfroms -->
+      <section class="sec-g platforms">
+        <h2 class="title" data-aos="fade-up" data-aos-once="true">
+          PLATFORMS
+        </h2>
+        <div class="pf-wrap">
+          <ul class="pf-card-wrap">
+            <li class="pf-card" data-aos="fade-up" data-aos-once="true">
+              <div class="pf-img pf-boardgame"></div>
+              <div class="pf-line"></div>
+              <div class="pf-txt-wrap">
+                <strong class="pf-tit">
+                  보드게임
+                </strong>
+                <p class="pf-txt">
+                  아스모디 그룹의 대표 사업 분야로,
+                  <br>
+                  보드게임, 카드게임 등 테이블 탑 게임들을
+                  <br>
+                  전 세계에 유통하고 있습니다.
+                </p>
+              </div>
+            </li>
+            <li class="pf-card" data-aos="fade-up" data-aos-once="true">
+              <div class="pf-img pf-digital"></div>
+              <div class="pf-line"></div>
+              <div class="pf-txt-wrap">
+                <strong class="pf-tit">
+                  디지털
+                </strong>
+                <p class="pf-txt">
+                  아스모디 그룹의 대표 IP와
+                  <br>
+                  전세계 유명 보드게임들을
+                  <br>
+                  디지털 게임으로 제작, 유통하고 있습니다.
+                </p>
+               </div>
+            </li>
+            <li class="pf-card" data-aos="fade-up" data-aos-once="true">
+              <div class="pf-img pf-entertain"></div>
+              <div class="pf-line"></div>
+              <div class="pf-txt-wrap">
+                <strong class="pf-tit">
+                  엔터테인먼트
+                </strong>
+                <p class="pf-txt">
+                  아스모디 그룹 게임의 세계관과 스토리를
+                  <br>
+                  기반으로 한 TV 시리즈, 영화, 서적 등의
+                  <br>
+                  콘텐츠로 이식하고 있습니다.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- studios -->
+      <section class="sec-g studios">
+        <h2 class="title" data-aos="fade-up" data-aos-once="true">
+          STUDIOS
+        </h2>
+        <div class="studio-slide-wrap" data-aos="fade-up" data-aos-once="true">
+         <div class="swiper mySwiper studios-slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide second-slide">        
+              <a href="#">
+              <div class="st-card">
+                <img src="./images/st_repos.jpg" alt="스튜디오 Repos Production"
+                class="card-image card-repos">
+                <div class="card-inner">
+                  <div class="card-tit">
+                    Repos Production
+                  </div>
+                  <div class="card-ft">
+                    <p class="hash tag1">&#35;7원더스</p>
+                    <p class="hash tag2">&#35;저스트원</p>
+                  </div>
+                </div>
+              </div>
+             </a>
+            </div>
+            <div class="swiper-slide second-slide">        
+              <a href="#">
+              <div class="st-card">
+                <img src="./images/st_lookout.jpg" alt="스튜디오 Lookout Games"
+                class="card-image card-repos">
+               <div class="card-inner">
+                <div class="card-tit">
+                  Lookout Games
+                </div>
+                <div class="card-ft">
+                  <p class="hash tag1">&#35;아그리콜라</p>
+                  <p class="hash tag2">&#35;그랜드 오스트리아 호텔</p>
+                </div>
+               </div>
+              </div>
+             </a>
+            </div>
+            <div class="swiper-slide second-slide">        
+              <a href="#">
+              <div class="st-card">
+                <img src="./images/st_spacecowboys.jpg" alt="스튜디오 Space Cowboy"
+                class="card-image card-repos">
+               <div class="card-inner">
+                <div class="card-tit">
+                  Space Cowboy
+                </div>
+                <div class="card-ft">
+                  <p class="hash tag1">&#35;스플렌더</p>
+                  <p class="hash tag2">&#35;언락 시리즈</p>
+                </div>
+               </div>
+              </div>
+             </a>
+            </div>
+            <div class="swiper-slide second-slide">        
+              <a href="#">
+              <div class="st-card">
+                <img src="./images/st_libellud.jpg" alt="스튜디오 Libellud"
+                class="card-image card-repos">
+               <div class="card-inner">
+                <div class="card-tit">
+                  Libellud
+                </div>
+                <div class="card-ft">
+                  <p class="hash tag1">&#35;딕싯 시리즈</p>
+                  <p class="hash tag2">&#35;미스테리움</p>
+                </div>
+               </div>
+              </div>
+             </a>
+            </div>
+            <div class="swiper-slide second-slide">        
+              <a href="#">
+              <div class="st-card">
+                <img src="./images/st_catan.jpg" alt="스튜디오 Catan Studio"
+                class="card-image card-repos">
+               <div class="card-inner">
+                <div class="card-tit">
+                  Catan Studio
+                </div>
+                <div class="card-ft">
+                  <p class="hash tag1">&#35;카탄 시리즈</p>
+                  <p class="hash tag2">&#35;카탄 굿즈</p>
+                </div>
+               </div>
+              </div>
+             </a>
+            </div>
+            <div class="swiper-slide second-slide">        
+              <a href="#">
+                <div class="st-card">
+                  <img src="./images/st_dow.jpg" alt="스튜디오 Days of Wonder"
+                  class="card-image card-repos">
+                  <div class="card-inner">
+                    <div class="card-tit">
+                      Days of Wonder
+                    </div>
+                    <div class="card-ft">
+                      <p class="hash tag1">&#35;티켓 투 라이드</p>
+                      <p class="hash tag2">&#35;스몰 월드</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+      <!-- location -->
+      <section class="sec-g location">
+        <h2 class="title">
+          LOCATION
+        </h2>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.5963846767268!2d126.96579267582598!3d37.39937633369579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5e3b8f1c33d3%3A0xf811f358048c2f5a!2zKOyjvCnslYTsiqTrqqjrlJTsvZTrpqzslYQ!5e0!3m2!1sko!2skr!4v1704044996218!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="loca-info">
+          <div class="loca-address" data-aos="fade-up" data-aos-once="true">
+            <strong class="loca-tit">
+              주소
+            </strong>
+            <p class="loca-txt">
+              경기도 안양시 동안구 벌말로 123 평촌스마트베이 A동 1901호
+            </p>
+          </div>
+          <div class="loca-call" data-aos="fade-up" data-aos-once="true">
+            <strong class="loca-tit">
+              대표번호
+            </strong>
+            <p class="loca-txt">
+              031-360-4288
+            </p>
+          </div>
+        </div>
+        <div class="line" data-aos="fade-up" data-aos-once="true"></div>
+        <div class="loca-subway" data-aos="fade-up" data-aos-once="true">
+          <strong class="loca-tit">
+            지하철
+          </strong>
+          <div class="subway-side-wrap">
+            <ul class="subway-name">
+              <li class="subway-num">
+                4
+              </li>
+              <li class="subway-line">
+                4호선
+              </li>
+              <li>
+                <div class="loca-txt-more">
+                  <p>
+                    인덕원역 4번 출구 &#40;도보 15분&#41;
+                  </p>
+                  <p>
+                    평촌역 3번 출구 &#40;도보 15분&#41;
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="ft-wrap">
+        <a href="#" class="ft-logo">아스모디</a>
+        <div class="ft-txt-inner">
+          <div class="info-wrap">
+            <div class="address">
+              (14056) 경기 안양시 동안구 벌말로 123 A동 1901호<br>
+              123 Beolmal-ro, Dongan-gu, Anyang-si A 1901, <br class="eng-enter">
+              Smart Bay Gyeonggi-do, 14056, Republic of Korea
+            </div>
+            <div class="call">
+              (82)-31-360-4288
+            </div>
+          </div>
+          <div class="copyright">
+            copyright &#169; Asmodee Korea Limited
+          </div>
+        </div>
+        <div class="sns-wrap">
+          <ul class="list-sns">
+            <li class="sns-icon">
+              <a href="https://www.facebook.com/AsmodeeKorea" class="facebook">페이스북</a>
+            </li>
+            <li class="sns-icon">
+              <a href="https://www.instagram.com/asmodee_korea/" class="insta">인스타그램</a>
+            </li>
+            <li class="sns-icon">
+              <a href="https://pf.kakao.com/_WjxdmK" class="kakao">카카오톡</a>
+            </li>
+            <li class="sns-icon">
+              <a href="https://blog.naver.com/asmodeekorea" class="blog">네이버 블로그</a>
+            </li>
+            <li class="sns-icon">
+              <a href="https://brand.naver.com/asmodeekorea" class="shop">온라인 몰</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
