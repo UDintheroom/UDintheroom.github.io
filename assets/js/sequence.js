@@ -1,53 +1,82 @@
-const img = new Image();
-const canvas = document.getElementById('screen1');
-const ctx = canvas.getContext('2d');
-let imgNum = 0;
+const wrapper = document.querySelector('#wrapper');
+const canvas = document.createElement('canvas');
+const context = canvas.getContext('2d');
+canvas.width = wrapper.offsetWidth;
+canvas.height = (canvas.width / 16) * 9;
 
-img.onload = function () {
-  setInterval(function() {
-    if (imgNum > 13) {
-      imgNum = 0;
-    }
-    player(imgNum);
-    imgNum++;
-  }, 500);
+canvas.style.position = 'sticky';
+canvas.style.top = '50%';
+canvas.style.transform = 'translateY(-50%)';
+
+wrapper.append(canvas);
+
+const img = new Image();
+img.onload = () => {
+  context.drawImage(img, 0, 0, canvas.width, canvas.height);
+};
+img.src = `/assets/images/video/opendoor0.png`;
+
+const main = document.querySelector('main');
+
+const computeStartScrollY = () => {
+  let prevElementSibling = wrapper.previousElementSibling;
+  let height = 0;
+  while (prevElementSibling) {
+    height += prevElementSibling.offsetHeight;
+    prevElementSibling = prevElementSibling.previousElementSibling;
+  }
+  return height;
 };
 
-function player(num) {
-  img.src = `/assets/images/video/opendoor${num}.png`;
-}
+const imageSources = Array(23)
+  .fill('')
+  .map((_, idx) => `/assets/images/video/opendoor${idx}.png`);
 
-img.addEventListener('load', function(e) {
-  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-});
+const startScrollY = computeStartScrollY();
+const standardHeight = canvas.height / imageSources.length;
 
-player(imgNum);
+const currentFrameIndex = () => {
+  const index = Math.floor((main.scrollTop - startScrollY) / standardHeight);
+  if (index < 0) return 0;
+  if (!imageSources[index]) return imageSources.length - 1;
+  return index;
+};
 
-// const imgNum = 0;
-// const img = new Image();
-// const canvas = document.getElementById('screen1');
-// const ctx = canvas.getContext('2d');
+let isRendering = false;
 
-// img.src = '../images/video/opendoor0.png'
+const render = () => {
+  if (!isRendering) {
+    isRendering = true;
+    const frameIndex = currentFrameIndex();
+    const image = new Image();
+    image.onload = () => {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(image, 0, 0, canvas.width, canvas.height);
+      isRendering = false;
+    };
+    image.src = imageSources[frameIndex];
+  }
+};
 
-// playSequence();
+const onScrollHandler = () => {
+  requestAnimationFrame(render);
+};
 
-// function playSequence() {
-//   const timer = setInterval(function() {
-//     if (imgNum > 13) {
-//       imgNum = 0;
-//     }
-//     player(imgNum);
-//     imgNum++;
-//   }, 30);
-// }
+main.addEventListener('scroll', onScrollHandler, { passive: true });
 
-// function player(num) {
-//   img.src = '../images/video/opendoor' + num + '.png';
-// }
+const preloadImages = () => {
+  imageSources.forEach((imgSrc) => {
+    const img = new Image();
+    img.src = imgSrc;
+  });
+};
 
-// img.addEventListener('load', function(e) {
-//   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-//   ctx.drawImage(img, 0, 0);
-// });
+const initFirstFrame = () => {
+  const image = new Image();
+  image.src = imageSources[0];
+  image.onload = () => context.drawImage(image, 0, 0, canvas.width, canvas.height);
+};
+
+preloadImages();
+initFirstFrame();
+
