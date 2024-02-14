@@ -63,7 +63,7 @@ canvas {
 }
 .object.obj4 {
   top: 90%;
-  right: 25%;
+  right: 7%;
   width: 150px;
   height: 150px;
   background: url(/assets/images/comm/asset5.png) center center/contain no-repeat;
@@ -83,7 +83,7 @@ canvas {
   background: url(/assets/images/comm/asset7.png) center center/contain no-repeat;
 }
 .object.obj7 {
-  top: 70%;
+  top: 73%;
   right: 50%;
   width: 180px;
   height: 180px;
