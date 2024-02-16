@@ -24,6 +24,51 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: 80px;
   z-index: 1;
+}
+
+.eng {
+  display: none;
+}
+
+.annyeong,
+.hello {
+  position: relative;
+  margin: 0 -13px;
+  top: 20px;
+  width: 170px;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
+  animation: bounce 0.45s ease infinite alternate;
+}
+.annyeong:nth-child(2),
+.hello:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.annyeong:nth-child(3),
+.hello:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.annyeong:nth-child(4),
+.hello:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.annyeong:nth-child(5),
+.hello:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.annyeong:nth-child(6),
+.hello:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+@keyframes bounce {
+  100% {
+    top: -20px;
+    filter: drop-shadow(0 50px 25px rgba(0, 0, 0, 0.1));
+  }
 }/*# sourceMappingURL=comm.css.map */

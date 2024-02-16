@@ -39,6 +39,34 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: 80px;
   z-index: 1;
+}
+
+.eng {
+  display: none;
+}
+
+.annyeong,
+.hello {
+  position: relative;
+  margin: 0 -13px;
+  top: 20px;
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  object-position: center;
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, .3));
+
+  animation: bounce .45s ease infinite alternate;
+  &:nth-child(2) {animation-delay: .1s;}
+  &:nth-child(3) {animation-delay: .2s;}
+  &:nth-child(4) {animation-delay: .3s;}
+  &:nth-child(5) {animation-delay: .4s;}
+  &:nth-child(6) {animation-delay: .5s;}
+}
+@keyframes bounce {
+  100% {
+    top: -20px;
+    filter: drop-shadow(0 50px 25px rgba(0, 0, 0, .1));
+  }
 }
