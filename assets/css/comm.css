@@ -1,7 +1,15 @@
-html,
-body {
+* {
+  text-decoration: none;
+  list-style: none;
+  line-height: 1.5px;
   padding: 0;
   margin: 0;
+}
+
+.gnb {
+  display: flex;
+  position: fixed;
+  z-index: 100;
 }
 
 .intro-animation {
@@ -71,24 +79,4 @@ body {
     top: -20px;
     filter: drop-shadow(0 50px 25px rgba(0, 0, 0, 0.1));
   }
-}
-.posters {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.profile-poster {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  width: 250px;
-  height: 250px;
-}
-
-.my-img {
-  width: inherit;
-  height: inherit;
-  background: url(/assets/images/comm/udroom-logo.png) center center/contain no-repeat;
 }/*# sourceMappingURL=comm.css.map */

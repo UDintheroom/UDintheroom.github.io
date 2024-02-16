@@ -1,6 +1,11 @@
 $(document).ready(function() {
     // fullpage
     $('#fullpage').fullpage({
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+        autoScrolling: true,
+        scrollHorizontally: true,
+        menu : '.gnb',
+        navigation: true,
         sectionsColor: ['#D6C1FF', '#4BBFC3', '#7BAABE', 'whitesmoke'],
         anchors: ['home', 'profile', 'desc1', 'desc2', 'desc3'],
     });
