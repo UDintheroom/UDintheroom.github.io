@@ -2,6 +2,7 @@ $(document).ready(function() {
     // fullpage
     $('#fullpage').fullpage({
         sectionsColor: ['#D6C1FF', '#4BBFC3', '#7BAABE', 'whitesmoke'],
+        anchors: ['home', 'profile', 'desc1', 'desc2', 'desc3'],
     });
 
     // intro) text fade in
