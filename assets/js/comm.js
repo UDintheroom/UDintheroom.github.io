@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // fullpage
+    fullpage
     $('#fullpage').fullpage({
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         autoScrolling: true,
@@ -25,6 +25,7 @@ $(document).ready(function() {
     });
 
 
+    // profile) #hashtag slide
     var swiper = new Swiper(".info-tags", {
         autoplay: {
             delay: 1500,
@@ -36,35 +37,16 @@ $(document).ready(function() {
     });
 
 
+    // gnb (side menu bar(circle)) + display
+    const nav = $('nav');
+    const toggleBtn = nav.find('.toggle-btn');
+    toggleBtn.on('click', function() {
+        nav.toggleClass('open');
+    });
+    const delayTime = 3450;
+    setTimeout(function() {
+        nav.css('display', 'flex');
+    }, delayTime);
+
 // !!!!!!!!!!! never deldete !!!!!!!!!!
 });
-
-// gnb (side menu bar(circle))
-const nav = document.querySelector('nav'),
-toggleBtn = nav.querySelector('.toggle-btn');
-
-toggleBtn.addEventListener('click', () => {
-    nav.classList.toggle('open')
-})
-
-function onDrag ({movementY}) {
-    const navStyle = window.getComputedStyle(nav)
-    const navTop = parseInt(navStyle.top)
-    const navHeight = parseInt(navStyle.height)
-    const windHeight = window.innerHeight
-    
-    nav.style.top = navTop > 0 ? `${navTop + movementY}px` : '1px'
-    if(navTop > windHeight - navHeight) {
-        nav.style.top = `${windHeight - navHeight}px`
-    }
-}
-
-nav.addEventListener('mousedown', () => {
-    nav.addEventListener('mousemove', onDrag)
-})
-nav.addEventListener('mouseup', () => {
-    nav.removeEventListener('mousemove', onDrag)
-})
-nav.addEventListener('mouselaeve', () => {
-    nav.removeEventListener('mousemove', onDrag)
-})
