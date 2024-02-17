@@ -11,42 +11,50 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="./assets/css/magic.min.css">
   <link rel="stylesheet" href="./assets/css/comm.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./assets/js/jquery.fullpage.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/comm.js"></script>
 </head>
 <body>
-  <header>
-    <div class="gnb">
-      <ul>
-        <li>
-          <a href="#home">
-            <!-- <img src="/assets/images/comm/udroom-logo.png" alt="로고"> -->
-            <p>home</p>
-          </a>
-        </li>
-        <li>
-          <a href="#home">
-            <p>PROFILE</p>
-          </a>
-        </li>
-        <li>
-          <a href="#home">
-            <p>PORTFOLIO</p>
-          </a>
-        </li>
-      </ul>
+  <nav>
+    <div class="nav-content">
+      <div class="toggle-btn">
+        <ion-icon name="grid-outline"></ion-icon>
+      </div>
+      <span style="--i:1;">
+        <a href="#home">
+          <img src="/assets/images/comm/udroom-logo.svg" alt="로고">
+        </a>
+      </span>
+      <span style="--i:2;">
+        <a href="#profile">
+          <ion-icon name="person-outline"></ion-icon>
+        </a>
+      </span>
+      <span style="--i:3;">
+        <a href="#portfolio1">
+          <ion-icon name="film-outline"></ion-icon>
+        </a>
+      </span>
+      <span style="--i:4;">
+        <a href="#contact">
+          <ion-icon name="call-outline"></ion-icon>
+        </a>
+      </span>
     </div>
-  </header>
+  </nav>
+  
 
   <main>
     <div id="fullpage">
       <div class="section intro-animation">
-        <video class="animation" autoplay muted>
+        <!-- <video class="animation" autoplay muted>
           <source src="/assets/images/comm/opendoor.mp4" type="video/mp4">
           Your browser does not support the video tag.
-        </video>
+        </video> -->
         <div class="intro-text">
           <div class="kor">
             <img src="/assets/images/comm/annyeong1.png" alt="안" class="annyeong an">
@@ -67,7 +75,7 @@
         </div>
       </div>
       <div class="section profile-sec">
-        <!-- <h2 class="blind">PROFILE</h2> -->
+        <h2 class="blind">PROFILE</h2>
         <div class="sec-bg info-bg"></div>
         <div class="sec-white info-wrap">
           <div class="pins info-pin">
@@ -77,7 +85,14 @@
             <div class="pin pin-rd"></div>
           </div>
           <div class="left-info">
-            <img src="/assets/images/comm/profile-edit.png" alt="프로필 사진" class="info-photo">
+            <div class="info-photo">
+              <div class="deco">
+                <img src="/assets/images/comm/twinkle-y.png" alt="반짝이" class="twinkle t-r">
+                <img src="/assets/images/comm/twinkle-y.png" alt="반짝이" class="twinkle t-l1">
+                <img src="/assets/images/comm/twinkle-y.png" alt="반짝이" class="twinkle t-l2">
+              </div>
+              <img src="/assets/images/comm/profile-edit.png" alt="프로필 사진">
+            </div>
             <div class="swiper mySwiper info-tags">
               <div class="swiper-wrapper">
                 <div class="swiper-slide info-tag"><p># 도전하는</p></div>
@@ -87,7 +102,7 @@
                 <div class="swiper-slide info-tag"><p># 성장하는</p></div>
               </div>
             </div>
-            <p class="info-desc">웹디자이너 <span>최유리</span>입니다</p>
+            <p class="info-desc">웹디자이너 <span>최유리</span>입니다.</p>
             <div class="line"></div>
             <ul class="info-list">
               <li>
@@ -110,7 +125,7 @@
           </div>
           <div class="right-info">
             <div class="experience">
-              <h3>EXPERIENCE</h3>
+              <h3>📚 EXPERIENCE</h3>
               <div class="line"></div>
               <ul>
                 <li>
@@ -132,7 +147,7 @@
               </ul>
             </div>
             <div class="skill">
-              <h3>SKILL</h3>
+              <h3>🎨 SKILL</h3>
               <div class="line"></div>
               <div class="skill-icons">
                 <img src="/assets/images/comm/skill-html.svg" alt="html" class="skill-icon">
@@ -151,7 +166,7 @@
               </div>
             </div>
             <div class="certificate">
-              <h3>CERTIFICATE</h3>
+              <h3>🔖 CERTIFICATE</h3>
               <div class="line"></div>
               <ul>
                 <li>

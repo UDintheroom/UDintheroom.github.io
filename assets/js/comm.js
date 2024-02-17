@@ -5,7 +5,7 @@ $(document).ready(function() {
         autoScrolling: true,
         menu : '.gnb',
         navigation: true,
-        anchors: ['home', 'profile', 'desc1', 'desc2', 'desc3'],
+        anchors: ['home', 'profile', 'portfolio1', 'portfolio2', 'portfolio3', 'contact'],
     });
 
     // intro) text fade in
@@ -38,3 +38,33 @@ $(document).ready(function() {
 
 // !!!!!!!!!!! never deldete !!!!!!!!!!
 });
+
+// gnb (side menu bar(circle))
+const nav = document.querySelector('nav'),
+toggleBtn = nav.querySelector('.toggle-btn');
+
+toggleBtn.addEventListener('click', () => {
+    nav.classList.toggle('open')
+})
+
+function onDrag ({movementY}) {
+    const navStyle = window.getComputedStyle(nav)
+    const navTop = parseInt(navStyle.top)
+    const navHeight = parseInt(navStyle.height)
+    const windHeight = window.innerHeight
+    
+    nav.style.top = navTop > 0 ? `${navTop + movementY}px` : '1px'
+    if(navTop > windHeight - navHeight) {
+        nav.style.top = `${windHeight - navHeight}px`
+    }
+}
+
+nav.addEventListener('mousedown', () => {
+    nav.addEventListener('mousemove', onDrag)
+})
+nav.addEventListener('mouseup', () => {
+    nav.removeEventListener('mousemove', onDrag)
+})
+nav.addEventListener('mouselaeve', () => {
+    nav.removeEventListener('mousemove', onDrag)
+})
