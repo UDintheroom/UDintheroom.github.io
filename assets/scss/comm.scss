@@ -1,19 +1,27 @@
-// 변수설정
-$bg-light: #F3EDFF;
-$bg-mid: #D6C1FF;
-$primary: #9A74EB;
-$point: #FFC700;
-
-$w: #fff;
-$b: #000;
+@import 'variables';
 
 // reset
 * {
   text-decoration: none;
   list-style: none;
-  line-height: 1.5px;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+span, p {
+  font-family: $ft-default;
+  color: $txt-default;
+  font-size: 18px; 
+}
+
+.blind {
+  display: none;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
 }
 
 // gnb
@@ -76,4 +84,160 @@ $b: #000;
 }
 
 
-// profile
+// profile (info)
+h3 {
+  font-size: 24px;
+}
+.skill h3,
+.certificate h3 {
+  margin-top: 40px;
+}
+.profile-sec {
+  background: linear-gradient(to bottom, $w, $bg-light);
+}
+.section {
+  position: relative;
+}
+.info-bg {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/images/comm/line-w.png) center center / cover no-repeat;
+}
+.sec-white {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  height: auto;
+  margin: 0 auto;
+  padding: 35px;
+  background: $w;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, .1);
+}
+.pin {
+  position: absolute;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, .2);
+  &.pin-lu {
+    top: 20px;
+    left: 20px;
+  }
+  &.pin-ru {
+    top: 20px;
+    right: 20px;
+  }
+  &.pin-ld {
+    bottom: 20px;
+    left: 20px;
+  }
+  &.pin-rd {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+.info-wrap {
+  .pin {
+    background: $primary;
+  }
+}
+
+.left-info {
+  margin-right: 100px;
+}
+.line {
+  background: $line;
+  width: 500px;
+  height: 1px;
+  margin: 25px 0;
+}
+// left - info
+.info-tags{
+  width: 100%;
+  height: 30px;
+  margin: 35px 0 7px 0;
+  .info-tag{
+    display: flex;
+    align-items: center;
+    p {
+      color: $point;
+      font-size: 28px;
+      font-weight: 800;
+    }
+  }
+}
+.info-desc {
+  font-size: 24px;
+  font-weight: 600;
+  span {
+    color: $primary;
+    font-size: 24px;
+  }
+}
+.info-list {
+  color: $txt-sub;
+  li {
+    display: flex;
+    margin-bottom: 7px;
+  }
+  a {
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin-right: 15px; 
+  }
+}
+// right - experience
+.experience {
+  li {
+    margin-bottom: 15px;
+    span {
+      color: $txt-sub;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+// right - skill
+.skill-icons {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  &.etc {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 24px;
+    background: $line;
+    color: $txt-default;
+    border-radius: 50px;
+    padding-top: 4px;
+  }
+}
+// right - certificate
+.certificate {
+  li {
+    margin-bottom: 20px;
+    span {
+      color: $txt-sub;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}

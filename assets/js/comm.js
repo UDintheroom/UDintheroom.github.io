@@ -3,10 +3,8 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         autoScrolling: true,
-        scrollHorizontally: true,
         menu : '.gnb',
         navigation: true,
-        sectionsColor: ['#D6C1FF', '#4BBFC3', '#7BAABE', 'whitesmoke'],
         anchors: ['home', 'profile', 'desc1', 'desc2', 'desc3'],
     });
 
@@ -24,6 +22,17 @@ $(document).ready(function() {
     $('.eng').mouseout(function() {
         $('.kor').css('display', 'block');
         $(this).css('display', 'none');
+    });
+
+
+    var swiper = new Swiper(".info-tags", {
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        spaceBetween: 0,
+        direction: "vertical",
     });
 
 
