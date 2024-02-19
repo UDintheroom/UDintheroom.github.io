@@ -2,7 +2,6 @@ $(document).ready(function() {
     // fullpage
     $('#fullpage').fullpage({
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-        autoScrolling: true,
         menu : '.gnb',
         navigation: true,
         anchors: ['home', 'profile', 'portfolio1', 'portfolio2', 'portfolio3', 'contact'],
