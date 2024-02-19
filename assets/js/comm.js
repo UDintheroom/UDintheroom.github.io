@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 
     // profile) hash tag
-    const $text = $(".typing .tag");
+    const tag = $(".typing .tag");
     const letters = [
         "도전하는",
         "성실한", 
@@ -52,7 +52,7 @@ $(document).ready(function() {
         const letter = letters[i].split("");
         while (letter.length) {
             await wait(speed);
-            $text.html($text.html() + letter.shift()); 
+            tag.html(tag.html() + letter.shift()); 
         }
         await wait(800);
         remove();
@@ -62,7 +62,7 @@ $(document).ready(function() {
         while (letter.length) {
             await wait(speed);
             letter.pop();
-            $text.html(letter.join("")); 
+            tag.html(letter.join("")); 
         }
         i = !letters[i+1] ? 0 : i + 1;
         typing();

@@ -229,7 +229,7 @@ h3 {
 
 .skill h3,
 .certificate h3 {
-  margin-top: 65px;
+  margin-top: 60px;
 }
 
 .profile-sec {
@@ -317,7 +317,6 @@ h3 {
   to { border-right: 2px solid $bg-mid; }
 }
 
-
 .info-desc {
   font-size: 28px;
   font-weight: 600;
@@ -389,7 +388,7 @@ h3 {
 // right - certificate
 .certificate {
   li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     span {
       color: $txt-sub;
       font-size: 14px;
