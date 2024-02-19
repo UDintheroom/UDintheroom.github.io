@@ -471,6 +471,12 @@ h3 {
       color: $txt-sub;
     }
   }
+.togo-btn:hover {
+    background: #00C1C1;
+    p {
+    color: $w;
+    }
+  }
 }
 
 .togo-btns{
@@ -502,6 +508,12 @@ h3 {
   }
   h4 {
     color: #77B934;
+  }
+  .togo-btn:hover {
+    background: #77B934;
+    p {
+    color: $w;
+    }
   }
 }
 

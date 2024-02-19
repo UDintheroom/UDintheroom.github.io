@@ -28,12 +28,14 @@ $(document).ready(function() {
 
     // intro) hello switch
     $('.kor').mouseover(function() {
-        $(this).css('display', 'none');
-        $('.eng').css('display', 'block');
+        $(this).fadeOut(120, function() {
+            $('.eng').fadeIn(120);
+        });
     });
     $('.eng').mouseout(function() {
-        $('.kor').css('display', 'block');
-        $(this).css('display', 'none');
+        $(this).fadeOut(120, function() {
+            $('.kor').fadeIn(120);
+        });
     });
 
 

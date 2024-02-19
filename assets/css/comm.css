@@ -470,6 +470,12 @@ h3 {
   margin-top: 5px;
   color: #555;
 }
+.right-pofol .togo-btn:hover {
+  background: #00C1C1;
+}
+.right-pofol .togo-btn:hover p {
+  color: #fff;
+}
 
 .togo-btns {
   display: flex;
@@ -499,6 +505,12 @@ h3 {
 }
 .port2-wrap h4 {
   color: #77B934;
+}
+.port2-wrap .togo-btn:hover {
+  background: #77B934;
+}
+.port2-wrap .togo-btn:hover p {
+  color: #fff;
 }
 
 .port3-sec {
