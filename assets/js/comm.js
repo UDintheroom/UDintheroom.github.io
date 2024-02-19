@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    fullpage
+    // fullpage
     $('#fullpage').fullpage({
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         autoScrolling: true,
@@ -8,11 +8,24 @@ $(document).ready(function() {
         anchors: ['home', 'profile', 'portfolio1', 'portfolio2', 'portfolio3', 'contact'],
     });
 
-    // intro) text fade in
+
+        // gnb (side menu bar(circle)) + display
+        const nav = $('nav');
+        const toggleBtn = nav.find('.toggle-btn');
+        toggleBtn.on('click', function() {
+            nav.toggleClass('open');
+        });
+        const delayTime = 3450;
+        setTimeout(function() {
+            nav.css('display', 'flex');
+        }, delayTime);
+
+
+    // intro) hello
     setTimeout(function() {
-        $(".intro-animation .intro-text").css('display', 'flex');
-        $('.intro-text').addClass('animate__animated animate__rubberBand');
-    }, 3300);
+        $(".intro-animation .intro-text").css('display', 'flex').addClass('animate__animated animate__rubberBand');
+        typing();
+    }, 3350);
 
     // intro) hello switch
     $('.kor').mouseover(function() {
@@ -25,28 +38,40 @@ $(document).ready(function() {
     });
 
 
-    // profile) #hashtag slide
-    var swiper = new Swiper(".info-tags", {
-        autoplay: {
-            delay: 1500,
-            disableOnInteraction: false,
-        },
-        loop: true,
-        spaceBetween: 0,
-        direction: "vertical",
-    });
+    // profile) hash tag
+    const $text = $(".typing .tag");
+    const letters = [
+        "도전하는",
+        "성실한", 
+        "소통하는",
+        "멈추지않는",
+        "성장하는",
+    ];
+    const speed = 100;
+    let i = 0;
+    const typing = async () => {  
+        const letter = letters[i].split("");
+        while (letter.length) {
+            await wait(speed);
+            $text.html($text.html() + letter.shift()); 
+        }
+        await wait(800);
+        remove();
+    }
+    const remove = async () => {
+        const letter = letters[i].split("");
+        while (letter.length) {
+            await wait(speed);
+            letter.pop();
+            $text.html(letter.join("")); 
+        }
+        i = !letters[i+1] ? 0 : i + 1;
+        typing();
+    }
+    function wait(ms) {
+        return new Promise(res => setTimeout(res, ms))
+    }
 
 
-    // gnb (side menu bar(circle)) + display
-    const nav = $('nav');
-    const toggleBtn = nav.find('.toggle-btn');
-    toggleBtn.on('click', function() {
-        nav.toggleClass('open');
-    });
-    const delayTime = 3450;
-    setTimeout(function() {
-        nav.css('display', 'flex');
-    }, delayTime);
 
-// !!!!!!!!!!! never deldete !!!!!!!!!!
 });
