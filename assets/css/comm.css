@@ -538,7 +538,7 @@ h3 {
 }
 
 .port4-sec {
-  background: #D6C1FF;
+  background: linear-gradient(to bottom, #D6C1FF, #9A74EB);
 }
 
 .port4-bg {

@@ -546,7 +546,7 @@ h3 {
 
 // portfolio 4 - etc
 .port4-sec {
-  background: $bg-mid;
+  background: linear-gradient(to bottom, $bg-mid, $primary);
 }
 .port4-bg {
   background: url(/assets/images/comm/room100w.png) center center / cover no-repeat;
