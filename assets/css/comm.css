@@ -146,7 +146,7 @@ nav.open .toggle-btn {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.4));
   animation: bounce 0.45s ease infinite alternate;
 }
 .annyeong:nth-child(2),

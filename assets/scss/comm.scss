@@ -154,7 +154,7 @@ nav.open .toggle-btn {
   height: 200px;
   object-fit: cover;
   object-position: center;
-  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, .3));
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, .4));
 
   animation: bounce .45s ease infinite alternate;
   &:nth-child(2) {animation-delay: .1s;}

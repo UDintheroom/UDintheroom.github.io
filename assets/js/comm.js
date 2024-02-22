@@ -4,7 +4,7 @@ $(document).ready(function() {
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         menu : '.gnb',
         navigation: true,
-        anchors: ['home', 'profile', 'portfolio1', 'portfolio2', 'portfolio3', 'contact'],
+        anchors: ['home', 'profile', 'portfolio1', 'portfolio2', 'portfolio3', 'portfolio4'],
     });
 
 
