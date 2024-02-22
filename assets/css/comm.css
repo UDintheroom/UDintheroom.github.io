@@ -272,7 +272,7 @@ h3 {
 }
 .info-photo .t-r {
   top: 100px;
-  right: 50px;
+  left: 420px;
   width: 45px;
 }
 .info-photo .t-l1 {
@@ -518,19 +518,43 @@ h3 {
 }
 
 .port3-bg {
+  background: url(/assets/images/comm/line100w.png) center center/cover no-repeat;
+}
+
+.port3-wrap .pin {
+  background: #DB2828;
+}
+.port3-wrap h4 {
+  color: #DB2828;
+}
+.port3-wrap .togo-btn:hover {
+  background: #DB2828;
+}
+.port3-wrap .togo-btn:hover p {
+  color: #fff;
+}
+.port3-wrap .logo-coca {
+  width: 430px;
+}
+
+.port4-sec {
+  background: #D6C1FF;
+}
+
+.port4-bg {
   background: url(/assets/images/comm/room100w.png) center center/cover no-repeat;
 }
 
-.port3-wrap .logo-ud {
+.port4-wrap .logo-ud {
   width: 130px;
 }
-.port3-wrap .pin {
+.port4-wrap .pin {
   background: #FFC700;
 }
-.port3-wrap h4 {
+.port4-wrap h4 {
   color: #FFC700;
 }
-.port3-wrap .check-list li .list-in-list {
+.port4-wrap .check-list li .list-in-list {
   list-style-image: none;
   list-style-type: square;
   margin-bottom: 5px;

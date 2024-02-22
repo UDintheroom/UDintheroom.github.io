@@ -272,7 +272,7 @@ h3 {
   }
   .t-r {
     top: 100px;
-    right: 50px;
+    left: 420px;
     width: 45px;
   }
   .t-l1 {
@@ -398,7 +398,7 @@ h3 {
 }
 
 
-// sec2 - portfolio
+// sec2 - portfolio1 아스모디코리아
 .port1-sec {
   background: $bg-light;
   display: flex;
@@ -495,7 +495,7 @@ h3 {
 }
 
 
-// portfolio2 
+// portfolio2 청도몰
 .port2-sec {
   background: linear-gradient(to bottom, $bg-light, $bg-mid);
 }
@@ -518,14 +518,40 @@ h3 {
 }
 
 
-// portfolio 3
+// portfolio3 코카콜라
 .port3-sec {
   background: $bg-mid;
 }
 .port3-bg {
-  background: url(/assets/images/comm/room100w.png) center center / cover no-repeat;
+  background: url(/assets/images/comm/line100w.png) center center / cover no-repeat;
 }
 .port3-wrap {
+  .pin {
+    background: #DB2828;
+  }
+  h4 {
+    color: #DB2828;
+  }
+  .togo-btn:hover {
+    background: #DB2828;
+    p {
+    color: $w;
+    }
+  }
+  .logo-coca {
+    width: 430px;
+  }
+}
+
+
+// portfolio 4 - etc
+.port4-sec {
+  background: $bg-mid;
+}
+.port4-bg {
+  background: url(/assets/images/comm/room100w.png) center center / cover no-repeat;
+}
+.port4-wrap {
   .logo-ud {
     width: 130px;
   }
