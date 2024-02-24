@@ -24,7 +24,7 @@ $(document).ready(function() {
     setTimeout(function() {
         $(".intro-animation .intro-text").css('display', 'flex').addClass('animate__animated animate__rubberBand');
         typing();
-    }, 3350);
+    }, 3500);
 
     // intro) hello switch
     $('.kor').mouseover(function() {
