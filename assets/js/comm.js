@@ -8,16 +8,16 @@ $(document).ready(function() {
     });
 
 
-        // gnb (side menu bar(circle)) + display
-        const nav = $('nav');
-        const toggleBtn = nav.find('.toggle-btn');
-        toggleBtn.on('click', function() {
-            nav.toggleClass('open');
-        });
-        const delayTime = 3450;
-        setTimeout(function() {
-            nav.css('display', 'flex');
-        }, delayTime);
+    // gnb (side menu bar(circle)) + display
+    const nav = $('nav');
+    const toggleBtn = nav.find('.toggle-btn');
+    toggleBtn.on('click', function() {
+        nav.toggleClass('open');
+    });
+    const delayTime = 3450;
+    setTimeout(function() {
+        nav.css('display', 'flex');
+    }, delayTime);
 
 
     // intro) hello
@@ -74,5 +74,5 @@ $(document).ready(function() {
     }
 
 
-
+// !!!!! never delete !!!!!
 });
