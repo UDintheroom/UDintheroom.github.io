@@ -421,7 +421,7 @@ h3 {
 }
 
 .left-pofol {
-  width: 65%;
+  width: 70%;
   height: 100%;
   background: #ccc;
   border-radius: 10px;
@@ -521,6 +521,9 @@ h3 {
 .port2-wrap .togo-btn:hover p {
   color: #fff;
 }
+.port2-wrap .logo-cheongdo {
+  width: 270px;
+}
 
 .port3-sec {
   background: #D6C1FF;
@@ -544,7 +547,7 @@ h3 {
   color: #fff;
 }
 .port3-wrap .logo-coca {
-  width: 350px;
+  width: 270px;
 }
 
 .port4-sec {

@@ -421,7 +421,7 @@ h3 {
 
 //left
 .left-pofol {
-  width: 65%;
+  width: 70%;
   height: 100%;
   background: #ccc;
   border-radius: 10px;
@@ -429,6 +429,18 @@ h3 {
   .work-img {
     width: 100%;
     height: 100%;
+    // -ms-transform: scale(0.25);
+    // -moz-transform: scale(0.25);
+    // -o-transform: scale(0.25);
+    // -webkit-transform: scale(0.25);
+    // transform: scale(84.9%);
+    
+    // -ms-transform-origin: 0 0;
+    // -moz-transform-origin: 0 0;
+    // -o-transform-origin: 0 0;
+    // -webkit-transform-origin: 0 0;
+    // transform-origin: 0 0;
+
     border-radius: 10px;
     margin-right: 45px;
   }
@@ -525,6 +537,9 @@ h3 {
     color: $w;
     }
   }
+  .logo-cheongdo {
+    width: 270px;
+  }
 }
 
 
@@ -550,7 +565,7 @@ h3 {
     }
   }
   .logo-coca {
-    width: 350px;
+    width: 270px;
   }
 }
 
