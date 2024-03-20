@@ -244,22 +244,36 @@ h3 {
   background: url(../../assets/images/comm/line-w.png) center center/cover no-repeat;
 }
 
+.info-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-around;
+}
 .info-wrap .pin {
   background: #9A74EB;
 }
 
 .line {
   background: #ddd;
-  width: 500px;
+  width: 33vw;
   height: 1px;
   margin: 5px 0 25px 0;
 }
 
 .left-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 45%;
+}
+.left-info .typing {
+  margin-top: 20px;
 }
 
 .right-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 45%;
 }
 
@@ -421,11 +435,11 @@ h3 {
 }
 
 .left-pofol {
-  width: 70%;
+  width: 65%;
   height: 100%;
   background: #ccc;
   border-radius: 10px;
-  margin-right: 45px;
+  margin-right: 25px;
 }
 .left-pofol .work-img {
   width: 100%;
@@ -439,7 +453,7 @@ h3 {
   position: relative;
 }
 .right-pofol .logo-asmo {
-  width: 196px;
+  width: 190px;
 }
 .right-pofol .desc-wrap {
   margin: 30px 0;
@@ -522,7 +536,7 @@ h3 {
   color: #fff;
 }
 .port2-wrap .logo-cheongdo {
-  width: 270px;
+  width: 250px;
 }
 
 .port3-sec {
