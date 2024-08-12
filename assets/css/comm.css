@@ -414,32 +414,18 @@ h3 {
   font-weight: 600;
 }
 
-.port1-sec {
-  background: #F3EDFF;
-  display: flex;
-  justify-content: space-around;
-}
-
-.port1-bg {
-  background: url(../../assets/images/comm/line100w.png) center center/cover no-repeat;
-}
-
-.pot1-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.port1-pins .pin {
-  background: #00C1C1;
-}
-
 .left-pofol {
   width: 65%;
   height: 100%;
   background: #ccc;
   border-radius: 10px;
+  border: 1px solid #ddd;
   margin-right: 25px;
+  overflow: hidden;
+}
+.left-pofol .page-image {
+  width: 100%;
+  height: auto;
 }
 .left-pofol .work-img {
   width: 100%;
@@ -448,6 +434,18 @@ h3 {
   margin-right: 45px;
 }
 
+.left-pofol .page-image:hover {
+  animation: imgScroll 10s;
+}
+
+@keyframes imgScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 .right-pofol {
   flex: 1;
   position: relative;
@@ -519,7 +517,7 @@ h3 {
 }
 
 .port2-bg {
-  background: url(../../assets/images/comm/line100w.png) center center/cover no-repeat;
+  background: url(../../assets/images/comm/line100w.png) center center/no-repeat;
 }
 
 .port2-wrap .pin {
@@ -562,6 +560,26 @@ h3 {
 }
 .port3-wrap .logo-coca {
   width: 270px;
+}
+
+.port1-sec {
+  background: #F3EDFF;
+  display: flex;
+  justify-content: space-around;
+}
+
+.port1-bg {
+  background: url(../../assets/images/comm/line100w.png) center center/cover no-repeat;
+}
+
+.pot1-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.port1-pins .pin {
+  background: #00C1C1;
 }
 
 .port4-sec {

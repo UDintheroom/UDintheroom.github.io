@@ -410,34 +410,19 @@ h3 {
 }
 
 
-// sec2 - portfolio1 아스모디코리아
-.port1-sec {
-  background: $bg-light;
-  display: flex;
-  justify-content: space-around;
-}
-.port1-bg {
-  background: url(../../assets/images/comm/line100w.png) center center / cover no-repeat;
-}
-.pot1-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.port1-pins {
-  .pin {
-    background: #00C1C1;
-  }
-}
-
 //left
 .left-pofol {
   width: 65%;
   height: 100%;
   background: #ccc;
   border-radius: 10px;
+  border: 1px solid #ddd;
   margin-right: 25px;
+  overflow: hidden;
+  .page-image {
+    width: 100%;
+    height: auto;
+  }
   .work-img {
     width: 100%;
     height: 100%;
@@ -456,6 +441,14 @@ h3 {
     border-radius: 10px;
     margin-right: 45px;
   }
+}
+
+.left-pofol .page-image:hover {
+  animation: imgScroll 10s;
+}
+@keyframes imgScroll {
+  0% {transform: translateY(0);}
+  100% {transform:translateY(-100%);}
 }
 
 //right
@@ -533,8 +526,13 @@ h3 {
   background: linear-gradient(to bottom, $bg-light, $bg-mid);
 }
 .port2-bg {
-  background: url(../../assets/images/comm/line100w.png) center center / cover no-repeat;
+  background: url(../../assets/images/comm/line100w.png) center center / no-repeat;
 }
+
+// .cheongdomall {
+//   background: url(../../assets/images/comm/cheongdomall_image.jpg) center center / cover no-repeat;
+//   }
+
 .port2-wrap {
   .pin {
     background: #77B934;
@@ -562,6 +560,7 @@ h3 {
 .port3-bg {
   background: url(../../assets/images/comm/line100w.png) center center / cover no-repeat;
 }
+
 .port3-wrap {
   .pin {
     background: #DB2828;
@@ -578,6 +577,28 @@ h3 {
   }
   .logo-coca {
     width: 270px;
+  }
+}
+
+// sec2 - portfolio1 아스모디코리아
+.port1-sec {
+  background: $bg-light;
+  display: flex;
+  justify-content: space-around;
+}
+.port1-bg {
+  background: url(../../assets/images/comm/line100w.png) center center / cover no-repeat;
+}
+
+.pot1-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.port1-pins {
+  .pin {
+    background: #00C1C1;
   }
 }
 
