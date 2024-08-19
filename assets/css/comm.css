@@ -369,6 +369,9 @@ h3 {
      object-fit: cover;
   margin-right: 15px;
 }
+.info-list .call-info {
+  margin-right: 30px;
+}
 
 .experience li {
   margin-bottom: 15px;
