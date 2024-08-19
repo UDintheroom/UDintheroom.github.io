@@ -4,7 +4,7 @@ $(document).ready(function() {
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         menu : '.gnb',
         navigation: true,
-        anchors: ['home', 'profile', 'portfolio1', 'portfolio2', 'portfolio3', 'portfolio4'],
+        anchors: ['home', 'profile', 'portfolio1', 'portfolio2', 'portfolio3', 'portfolio-etc'],
     });
 
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
     toggleBtn.on('click', function() {
         nav.toggleClass('open');
     });
-    const delayTime = 3450;
+    const delayTime = 4000;
     setTimeout(function() {
         nav.css('display', 'flex');
     }, delayTime);
@@ -24,7 +24,7 @@ $(document).ready(function() {
     setTimeout(function() {
         $(".intro-animation .intro-text").css('display', 'flex').addClass('animate__animated animate__rubberBand');
         typing();
-    }, 3500);
+    }, 4000);
 
     // intro) hello switch
     $('.kor').mouseover(function() {
@@ -73,6 +73,9 @@ $(document).ready(function() {
         return new Promise(res => setTimeout(res, ms))
     }
 
+    // document.getElementById("darkModeToggle").onclick = function() {
+    //     document.body.classList.toggle("dark-mode");
+    // };
 
 // !!!!! never delete !!!!!
 });

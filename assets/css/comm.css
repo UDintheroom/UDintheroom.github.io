@@ -513,11 +513,11 @@ h3 {
 }
 
 .port2-sec {
-  background: linear-gradient(to bottom, #F3EDFF, #D6C1FF);
+  background: #F3EDFF;
 }
 
 .port2-bg {
-  background: url(../../assets/images/comm/line100w.png) center center/no-repeat;
+  background: url(../../assets/images/comm/line100w.png) center center/cover no-repeat;
 }
 
 .port2-wrap .pin {
@@ -538,7 +538,7 @@ h3 {
 }
 
 .port3-sec {
-  background: #D6C1FF;
+  background: linear-gradient(to bottom, #F3EDFF, #D6C1FF);
 }
 
 .port3-bg {
@@ -563,7 +563,7 @@ h3 {
 }
 
 .port1-sec {
-  background: #F3EDFF;
+  background: #D6C1FF;
   display: flex;
   justify-content: space-around;
 }
@@ -580,6 +580,80 @@ h3 {
 
 .port1-pins .pin {
   background: #00C1C1;
+}
+
+.ud-left-pofol {
+  background: #fff;
+  border: 1px solid #fff;
+}
+.ud-left-pofol .udroom-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.ud-left-pofol .work-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.ud-left-pofol .work-title {
+  position: relative;
+}
+.ud-left-pofol .thumbnail {
+  background: url(../images/comm/pofol1.jpg) center center/cover no-repeat;
+}
+.ud-left-pofol .detailpage {
+  background: url(../images/comm/pofol-page0.jpg) top center/cover no-repeat;
+}
+.ud-left-pofol .print {
+  background: url(../images/comm/pofol-print.jpg) center center/cover no-repeat;
+}
+.ud-left-pofol .gs {
+  background: url(../images/comm/pofol-gs.jpg) center center/cover no-repeat;
+}
+.ud-left-pofol .ninetale {
+  background: url(../images/comm/pofol-nine.png) center center/cover no-repeat;
+}
+.ud-left-pofol .etc {
+  background: url(../images/comm/pofol-airpods.png) center center/cover no-repeat;
+}
+.ud-left-pofol .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s ease-in-out;
+}
+.ud-left-pofol .work-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  height: 49.5%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.ud-left-pofol .work-title p {
+  z-index: 1;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #9A74EB;
+  text-shadow: -1px 0px #fff, 0px 1px #fff, 1px 0px #fff, 0px -1px #fff;
+  transition: opacity 0.2s ease-in-out;
+}
+.ud-left-pofol .work-title .work-sub {
+  font-size: 12px;
+  font-weight: normal;
+  color: #333;
+}
+.ud-left-pofol .work-title:hover p {
+  opacity: 0;
+}
+.ud-left-pofol .work-title:hover .overlay {
+  opacity: 0;
 }
 
 .port4-sec {

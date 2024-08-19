@@ -523,15 +523,11 @@ h3 {
 
 // portfolio2 청도몰
 .port2-sec {
-  background: linear-gradient(to bottom, $bg-light, $bg-mid);
+  background: $bg-light;
 }
 .port2-bg {
-  background: url(../../assets/images/comm/line100w.png) center center / no-repeat;
+  background: url(../../assets/images/comm/line100w.png) center center / cover no-repeat;
 }
-
-// .cheongdomall {
-//   background: url(../../assets/images/comm/cheongdomall_image.jpg) center center / cover no-repeat;
-//   }
 
 .port2-wrap {
   .pin {
@@ -555,7 +551,7 @@ h3 {
 
 // portfolio3 코카콜라
 .port3-sec {
-  background: $bg-mid;
+  background: linear-gradient(to bottom, $bg-light, $bg-mid);
 }
 .port3-bg {
   background: url(../../assets/images/comm/line100w.png) center center / cover no-repeat;
@@ -582,7 +578,7 @@ h3 {
 
 // sec2 - portfolio1 아스모디코리아
 .port1-sec {
-  background: $bg-light;
+  background: $bg-mid;
   display: flex;
   justify-content: space-around;
 }
@@ -604,6 +600,80 @@ h3 {
 
 
 // portfolio 4 - etc
+.ud-left-pofol {
+  background: #fff;
+  border: 1px solid $w;
+  .udroom-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .work-img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // background: #000;
+  }
+  .work-title {
+    position: relative;
+  }
+  .thumbnail {
+    background: url(../images/comm/pofol1.jpg) center center / cover no-repeat ;
+  }
+  .detailpage {
+    background: url(../images/comm/pofol-page0.jpg) top center / cover no-repeat ;
+  }
+  .print {
+    background: url(../images/comm/pofol-print.jpg) center center / cover no-repeat ;
+  }
+  .gs {
+    background: url(../images/comm/pofol-gs.jpg) center center / cover no-repeat ;
+  }
+  .ninetale {
+    background: url(../images/comm/pofol-nine.png) center center / cover no-repeat ;
+  }
+  .etc {
+    background: url(../images/comm/pofol-airpods.png) center center / cover no-repeat ;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.2s ease-in-out;
+  }
+  .work-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33%;
+    height: 49.5%;
+
+    border: 1px solid $line;
+    border-radius: 3px;
+    p {
+      z-index: 1;
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      color: $primary;
+      text-shadow: -1px 0px $w, 0px 1px $w, 1px 0px $w, 0px -1px $w;
+      transition: opacity 0.2s ease-in-out;
+    }
+    .work-sub {
+      font-size: 12px;
+      font-weight: normal;
+      color: $txt-default;
+    }
+  }
+  .work-title:hover {
+    p {opacity: 0;}
+    .overlay {opacity: 0;}
+  }
+}
+
 .port4-sec {
   background: linear-gradient(to bottom, $bg-mid, $primary);
 }
